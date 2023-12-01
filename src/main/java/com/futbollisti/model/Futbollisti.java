@@ -1,2 +1,21 @@
-package com.futbollisti.model;public class Futbollisti {
+package com.futbollisti.model;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "futbollistet")
+public class Futbollisti {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String name;
+    private int age;
+    private double length;
+    private String position;
 }
